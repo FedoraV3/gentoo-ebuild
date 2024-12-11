@@ -89,7 +89,7 @@ inherit cargo
 
 DESCRIPTION="Unix Command Line Tools Rewrite (Rust)"
 HOMEPAGE="https://github.com/FedoraV3/unix_cmds_rewrite"
-SRC_URI="https://github.com/FedoraV3/unix_cmds_rewrite.git"
+SRC_URI="https://github.com/FedoraV3/unix_cmds_rewrite/archive/refs/tags/stable.tar.gz"
 
 LICENSE="MIT Unicode-3.0 || ( Apache-2.0 Boost-1.0 )"
 SLOT="0"
