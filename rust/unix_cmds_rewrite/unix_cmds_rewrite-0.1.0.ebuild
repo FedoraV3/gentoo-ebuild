@@ -89,9 +89,7 @@ inherit cargo
 
 DESCRIPTION=""
 HOMEPAGE=""
-SRC_URI="
-	${CARGO_CRATE_URIS}
-"
+SRC_URI="https://github.com/FedoraV3/unix_cmds_rewrite"
 
 LICENSE=""
 # Dependent crate licenses
