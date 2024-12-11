@@ -5,7 +5,6 @@
 
 EAPI=8
 
-# Define the crates
 CRATES="
 	ansi_term@0.12.1
 	anstream@0.6.18
@@ -89,13 +88,17 @@ inherit cargo
 
 DESCRIPTION="Unix Command Line Tools Rewrite (Rust)"
 HOMEPAGE="https://github.com/FedoraV3/unix_cmds_rewrite"
-SRC_URI="https://github.com/FedoraV3/unix_cmds_rewrite.git"
+SRC_URI="https://github.com/FedoraV3/unix_cmds_rewrite/archive/refs/tags/stable.tar.gz"
 
 LICENSE="MIT Unicode-3.0 || ( Apache-2.0 Boost-1.0 )"
 SLOT="0"
 KEYWORDS="~amd64"
 
-# Make sure to update the manifest (if not done) and other settings
+# New src_prepare function to clone the repository
+src_prepare() {
+    # Clone the repository
+    git clone https://github.com/FedoraV3/unix_cmds_rewrite.git "${S}"
+}
 
 src_compile() {
     cargo_src_compile
